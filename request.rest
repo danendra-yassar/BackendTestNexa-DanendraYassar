@@ -1,0 +1,39 @@
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJrYXJ5YXdhbiB0ZXN0IiwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjkxMTE1MzI5LCJleHAiOjE2OTExMTU0NDl9.7RzH3e33TpnViEErkgO0UWN035Wov7ACGddKHgjtaS8
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "karyawan test",
+    "email":"test@mail.com",
+    "password": "test123",
+    "confPassword": "test123"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email":"test@mail.com",
+    "password": "test123"
+}
+
+###
+PATCH http://localhost:3000/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJrYXJ5YXdhbiB0ZXN0IiwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjkxMTE1MzI5LCJleHAiOjE2OTExMTU0NDl9.7RzH3e33TpnViEErkgO0UWN035Wov7ACGddKHgjtaS8
+
+Content-Type: application/json
+
+{
+    "name": "jhon doe",
+    "email":"test@mail.com",
+}
+
+###
+GET http://localhost:3000/token
+
+###
+DELETE http://localhost:3000/logout
